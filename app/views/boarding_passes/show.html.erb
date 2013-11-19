@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @boarding_pass.source %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @boarding_pass.destination %>
+</p>
+
+<p>
+  <strong>Transportation:</strong>
+  <%= @boarding_pass.transportation %>
+</p>
+
+<p>
+  <strong>Seat:</strong>
+  <%= @boarding_pass.seat %>
+</p>
+
+<p>
+  <strong>Gate:</strong>
+  <%= @boarding_pass.gate %>
+</p>
+
+<p>
+  <strong>Counter:</strong>
+  <%= @boarding_pass.counter %>
+</p>
+
+<%= link_to 'Edit', edit_boarding_pass_path(@boarding_pass) %> |
+<%= link_to 'Back', boarding_passes_path %>

@@ -1,0 +1,41 @@
+<%= form_for(@boarding_pass) do |f| %>
+  <% if @boarding_pass.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@boarding_pass.errors.count, "error") %> prohibited this boarding_pass from being saved:</h2>
+
+      <ul>
+      <% @boarding_pass.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :source %><br>
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :destination %><br>
+    <%= f.text_field :destination %>
+  </div>
+  <div class="field">
+    <%= f.label :transportation %><br>
+    <%= f.text_field :transportation %>
+  </div>
+  <div class="field">
+    <%= f.label :seat %><br>
+    <%= f.text_field :seat %>
+  </div>
+  <div class="field">
+    <%= f.label :gate %><br>
+    <%= f.text_field :gate %>
+  </div>
+  <div class="field">
+    <%= f.label :counter %><br>
+    <%= f.text_field :counter %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

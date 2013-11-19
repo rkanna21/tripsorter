@@ -1,0 +1,44 @@
+<h1>Listing boarding_passes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Destination</th>
+      <th>Transportation</th>
+      <th>Seat</th>
+      <th>Gate</th>
+      <th>Counter</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+    <% @boarding_passes.each do |boarding_pass| %>
+      <tr>
+        <td><%= boarding_pass.source %></td>
+        <td><%= boarding_pass.destination %></td>
+        <td><%= boarding_pass.transportation %></td>
+        <td><%= boarding_pass.seat %></td>
+        <td><%= boarding_pass.gate %></td>
+        <td><%= boarding_pass.counter %></td>
+        <td><%= link_to 'Show', boarding_pass %></td>
+        <td><%= link_to 'Edit', edit_boarding_pass_path(boarding_pass) %></td>
+        <td><%= link_to 'Destroy', boarding_pass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      
+    <% end %>
+    <%= @st%>
+    
+  </tbody>
+</table>
+
+<br>
+
+
+
+<%= link_to 'New Boarding pass', new_boarding_pass_path %>
+
